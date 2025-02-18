@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-11-10.0.26100-SP0",
+  "python":  "CPython 3.13.2",
+  "startedAt":  "2025-02-17T19:08:27.724123Z",
+  "program":  "<python with no main file>",
+  "git":  {
+    "remote":  "https://github.com/Anhquannnnnn/Data-Augmentation.git",
+    "commit":  "b88a5a75cf45835f08dd026b6cd318f91f21b5d1"
+  },
+  "email":  "tuanhquanle@gmail.com",
+  "root":  "C:\\Users\\anhqu\\Desktop\\Anh Quan\\Data Augmentation\\Code",
+  "host":  "LTAQ",
+  "executable":  "C:\\Users\\anhqu\\anaconda3\\envs\\torchenv\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "509721178112",
+      "used":  "261447561216"
+    }
+  },
+  "memory":  {
+    "total":  "17024741376"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "memoryTotal":  "6442450944",
+      "cudaCores":  3840,
+      "architecture":  "Ampere"
+    }
+  ],
+  "cudaVersion":  "12.3"
+}
