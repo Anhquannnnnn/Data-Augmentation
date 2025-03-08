@@ -5,12 +5,12 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-
-
+from sklearn.decomposition import PCA
 
 
 class DataPreprocessor:
     def __init__(self, 
+                 data: pd.DataFrame,
                  numerical_features: list[str] = None,
                  categorical_features: list[str] = None,
                  scaling_method: str = 'standard',
@@ -26,6 +26,7 @@ class DataPreprocessor:
             categorical_encoding: 'onehot' or 'label'
             max_categories: Maximum number of categories for one-hot encoding
         """
+        self.data = data
         self.numerical_features = numerical_features
         self.categorical_features = categorical_features
         self.scaling_method = scaling_method
@@ -38,6 +39,17 @@ class DataPreprocessor:
         self.ordinal_encoders = {}
         self.column_transformer = None
         self.feature_names_out_ = None
+    def get_info(self):
+        n_null = self.data.isnull().sum()
+        d_type = self.data.dtypes
+        n_moda = self.data.nunique()
+        info = pd.DataFrame({
+            'N null': n_null,
+            'Data type': d_type,
+            "N modalités": n_moda
+        })
+        return info
+    
     def fill_num(self,num: pd.DataFrame):
         null_map = num.isnull().sum()
         cols_contain_null = null_map.index[null_map >0 ]
@@ -205,3 +217,19 @@ def preprocess_data_for_tvae(data: pd.DataFrame,
     preprocessed_data = preprocessor.fit_transform(data)
     
     return preprocessed_data, preprocessor
+def in_out_to_list(in_out_str):
+    if type(in_out_str) == str:
+        list_str = in_out_str.split(", ")
+        list_int = []
+        for i in range(len(list_str)):
+            a_convert = list_str[i]
+            if i == 0:
+                a_convert = a_convert[1:]
+            elif i == len(list_str)-1:
+                a_convert = a_convert[:-1]
+            list_int.append(float(a_convert))
+        return list_int
+    else:
+        return in_out_str
+
+    

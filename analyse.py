@@ -4,14 +4,28 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 from typing import List, Union, Optional
+import random
+from preprocessing import in_out_to_list
 
+
+def display_output(data, list_output):
+    plt.figure()
+    for i in list_output:
+        plt.plot(in_out_to_list(data["OUTPUT"][i]), label = f"DATA = {data["DATA"][i]}, T= {data["T"][i]}")
+        plt.legend()
+    
+    plt.grid()
+    plt.show()
+
+
+        
 class DataAnalyzer:
     """
     A class for comprehensive data analysis including summary statistics,
     visualizations, and statistical tests.
     """
     
-    def __init__(self, data: pd.DataFrame):
+    def __init__(self, data: pd.DataFrame, numeric_columns,categorical_columns ):
         """
         Initialize the DataAnalyzer with a pandas DataFrame.
         
@@ -21,18 +35,21 @@ class DataAnalyzer:
             The input data to analyze
         """
         self.data = data
-        self.numeric_columns = data.select_dtypes(include=[np.number]).columns
-        self.categorical_columns = data.select_dtypes(exclude=[np.number]).columns
+        self.numeric_columns =numeric_columns
+        self.categorical_columns = categorical_columns
+
         
     def get_summary_statistics(self) -> pd.DataFrame:
         """
         Generate comprehensive summary statistics for numeric columns.
         """
-        summary = self.data[self.numeric_columns].describe()
+        summary_num = self.data[self.numeric_columns].describe()
         # Add additional statistics
-        summary.loc['skewness'] = self.data[self.numeric_columns].skew()
-        summary.loc['kurtosis'] = self.data[self.numeric_columns].kurtosis()
-        return summary
+        summary_num.loc['skewness'] = self.data[self.numeric_columns].skew()
+        summary_num.loc['kurtosis'] = self.data[self.numeric_columns].kurtosis()
+
+        summary_cat = self.data[self.categorical_columns].describe()
+        return summary_num, summary_cat
     
     def analyze_distributions(self, columns: Optional[list[str]] = None) -> dict:
         """
@@ -43,8 +60,6 @@ class DataAnalyzer:
         columns : List[str], optional
             Specific columns to analyze. If None, analyzes all numeric columns.
         """
-        if columns is None:
-            columns = self.numeric_columns
             
         results = {}
         for col in columns:
@@ -112,6 +127,50 @@ class DataAnalyzer:
                 
         plt.tight_layout()
         return fig
+
+
+
+    def plot_distributions_cat(self, columns: Optional[list[str]] = None):
+        """
+        Create categorical distribution plots showing value counts for specified columns.
+        """
+        if columns is None:
+            columns = self.categorical_columns
+    
+        # Handle empty columns case
+        if not columns:
+            print("No categorical columns to plot")
+            return None
+    
+        # Calculate grid dimensions
+        n_cols = min(2, len(columns))
+        n_rows = (len(columns) + n_cols - 1) // n_cols  # More robust calculation
+    
+        # Create subplot grid
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=(12, 4*n_rows))
+        axes = np.array(axes).flatten()  # Ensure axes is always an array
+    
+        # Plot each categorical distribution
+        for idx, col in enumerate(columns):
+            if col not in self.data.columns:
+                continue
+                
+            # Create count plot with trimmed x-labels
+            ax = axes[idx]
+            sns.countplot(data=self.data, x=col, ax=ax, order=self.data[col].value_counts().index)
+            ax.set_title(f'Distribution of {col}', pad=15)
+            ax.set_xlabel('')  # Remove redundant x-axis label
+            
+            # Rotate labels and adjust layout
+            ax.tick_params(axis='x', rotation=45 if self.data[col].nunique() > 5 else 0)
+            ax.tick_params(axis='both', labelsize=9)
+    
+        # Hide empty subplots and adjust layout
+        for j in range(len(columns), len(axes)):
+            axes[j].set_visible(False)
+    
+        plt.tight_layout(pad=2.0)
+        return fig
     
     def plot_correlation_heatmap(self):
         """
@@ -141,6 +200,8 @@ class DataAnalyzer:
         plt.xticks(rotation=45)
         plt.title('Boxplots of Numeric Variables')
         return plt.gcf()
+
+        
 
     def generate_report(self) -> str:
         """
