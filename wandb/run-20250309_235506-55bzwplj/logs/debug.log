@@ -1,0 +1,75 @@
+2025-03-09 23:55:06,202 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235506-55bzwplj\logs\debug.log
+2025-03-09 23:55:06,202 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235506-55bzwplj\logs\debug-internal.log
+2025-03-09 23:55:06,203 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002402614A350>
+2025-03-09 23:55:06,203 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:55:06,203 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.05, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 200, '_wandb': {}}
+2025-03-09 23:55:06,204 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 23:55:06,204 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 23:55:06,205 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 23:55:06,207 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 23:55:06,208 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 23:55:06,229 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 23:55:06,270 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 23:56:08,813 WARNING MainThread:17136 [wandb_init.py:init():1475] interrupted
+Traceback (most recent call last):
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1471, in init
+    return wi.init(run_settings, run_config)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 941, in init
+    result = run_init_handle.wait(
+        timeout=timeout,
+        on_progress=self._on_progress_init,
+        cancel=True,
+    )
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 275, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 122, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 118, in _wait
+    return self._event.wait(timeout=timeout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 659, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 363, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2025-03-09 23:56:18,950 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235618-mwsyde2m\logs\debug.log
+2025-03-09 23:56:18,950 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235618-mwsyde2m\logs\debug-internal.log
+2025-03-09 23:56:18,951 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:56:18,951 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.05, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 200, '_wandb': {}}
+2025-03-09 23:56:18,955 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 23:56:18,955 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 23:56:18,957 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 23:56:18,958 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 23:56:18,959 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 23:56:18,974 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 23:56:19,010 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 23:56:28,100 WARNING MainThread:17136 [wandb_init.py:init():1475] interrupted
+Traceback (most recent call last):
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1471, in init
+    return wi.init(run_settings, run_config)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 941, in init
+    result = run_init_handle.wait(
+        timeout=timeout,
+        on_progress=self._on_progress_init,
+        cancel=True,
+    )
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 275, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 122, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 118, in _wait
+    return self._event.wait(timeout=timeout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 659, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 363, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

@@ -1,0 +1,16 @@
+{"time":"2025-03-09T18:48:20.9278792+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"C:\\Users\\anhqu\\Desktop\\Anh Quan\\Data Augmentation\\Code\\wandb\\run-20250309_184820-qd5teie2\\logs\\debug-core.log"}
+{"time":"2025-03-09T18:48:21.0377454+01:00","level":"INFO","msg":"created new stream","id":"qd5teie2"}
+{"time":"2025-03-09T18:48:21.0377454+01:00","level":"INFO","msg":"stream: started","id":"qd5teie2"}
+{"time":"2025-03-09T18:48:21.0377454+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"qd5teie2"}
+{"time":"2025-03-09T18:48:21.0377454+01:00","level":"INFO","msg":"sender: started","stream_id":"qd5teie2"}
+{"time":"2025-03-09T18:48:21.0377454+01:00","level":"INFO","msg":"handler: started","stream_id":"qd5teie2"}
+{"time":"2025-03-09T18:48:21.2950149+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-09T18:49:28.4578146+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-09T18:49:28.45832+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-09T18:49:29.4491537+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-09T18:49:29.4741458+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 62-69, summary, console lines 7-9","runtime_seconds":0.0249921}],"total_operations":1}}
+{"time":"2025-03-09T18:49:30.6926817+01:00","level":"INFO","msg":"stream: closing","id":"qd5teie2"}
+{"time":"2025-03-09T18:49:30.6926817+01:00","level":"INFO","msg":"handler: closed","stream_id":"qd5teie2"}
+{"time":"2025-03-09T18:49:30.6926817+01:00","level":"INFO","msg":"sender: closed","stream_id":"qd5teie2"}
+{"time":"2025-03-09T18:49:30.6926817+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qd5teie2"}
+{"time":"2025-03-09T18:49:30.6926817+01:00","level":"INFO","msg":"stream: closed","id":"qd5teie2"}

@@ -1,0 +1,581 @@
+2025-03-09 18:25:38,633 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_182538-446jd8qy\logs\debug.log
+2025-03-09 18:25:38,633 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_182538-446jd8qy\logs\debug-internal.log
+2025-03-09 18:25:38,633 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 18:25:38,633 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 100, '_wandb': {}}
+2025-03-09 18:25:38,634 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 18:27:33,756 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/157pbgea
+2025-03-09 18:27:33,757 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 18:27:33,757 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:27:33,757 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 18:27:33,757 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 18:27:33,757 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 18:27:33,758 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 18:27:35,700 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 18:27:35,701 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 18:27:35,702 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 18:28:56,654 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_182856-zdxms0an\logs\debug.log
+2025-03-09 18:28:56,654 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_182856-zdxms0an\logs\debug-internal.log
+2025-03-09 18:28:56,654 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000023FBD2C49D0>
+2025-03-09 18:28:56,655 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 18:28:56,655 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.5, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 18:28:56,655 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 18:28:56,655 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 18:28:56,656 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 18:28:56,657 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 18:28:56,659 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 18:28:56,673 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 594981: character maps to <undefined>
+2025-03-09 18:28:56,673 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 18:28:56,706 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 18:28:57,101 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 18:28:57,241 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 18:28:57,242 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 18:28:57,244 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 18:28:57,244 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 18:28:57,245 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 18:29:58,331 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:29:58,332 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 18:29:58,412 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 18:29:58,427 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:29:58,428 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 18:30:02,841 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 18:30:02,859 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_183002-bamd7tha\logs\debug.log
+2025-03-09 18:30:02,860 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_183002-bamd7tha\logs\debug-internal.log
+2025-03-09 18:30:02,860 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 18:30:02,860 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.2, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 18:30:02,866 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 18:31:24,306 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/zdxms0an
+2025-03-09 18:31:24,307 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 18:31:24,307 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:31:24,307 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 18:31:24,308 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 18:31:24,308 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 18:31:24,308 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 18:31:26,293 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 18:31:26,293 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 18:31:26,294 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 18:44:24,833 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_184424-spqhmxul\logs\debug.log
+2025-03-09 18:44:24,833 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_184424-spqhmxul\logs\debug-internal.log
+2025-03-09 18:44:24,833 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401D2BF240>
+2025-03-09 18:44:24,833 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 18:44:24,835 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.2, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 18:44:24,835 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 18:44:24,835 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 18:44:24,836 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 18:44:24,837 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 18:44:24,840 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 18:44:24,853 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 595823: character maps to <undefined>
+2025-03-09 18:44:24,853 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 18:44:24,889 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 18:44:25,202 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 18:44:25,338 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 18:44:25,338 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 18:44:25,338 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 18:44:25,338 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 18:44:25,339 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 18:44:52,040 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:44:52,040 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 18:44:52,140 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 18:44:52,155 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:44:52,156 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 18:44:55,374 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 18:44:55,391 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_184455-7tzb6f3f\logs\debug.log
+2025-03-09 18:44:55,392 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_184455-7tzb6f3f\logs\debug-internal.log
+2025-03-09 18:44:55,392 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 18:44:55,392 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 18:44:55,392 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 18:46:11,531 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/spqhmxul
+2025-03-09 18:46:11,532 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 18:46:11,532 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:46:11,533 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 18:46:11,533 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 18:46:11,533 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 18:46:11,533 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 18:46:13,511 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 18:46:13,512 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 18:46:13,513 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 18:48:20,924 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_184820-qd5teie2\logs\debug.log
+2025-03-09 18:48:20,924 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_184820-qd5teie2\logs\debug-internal.log
+2025-03-09 18:48:20,925 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401FB5E350>
+2025-03-09 18:48:20,925 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 18:48:20,925 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 18:48:20,925 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 18:48:20,925 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 18:48:20,927 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 18:48:20,928 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 18:48:20,930 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 18:48:20,943 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 595826: character maps to <undefined>
+2025-03-09 18:48:20,943 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 18:48:20,976 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 18:48:21,292 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 18:48:21,461 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 18:48:21,462 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 18:48:21,462 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 18:48:21,462 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 18:48:21,462 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 18:49:28,455 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/qd5teie2
+2025-03-09 18:49:28,456 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 18:49:28,456 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 18:49:28,457 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 18:49:28,457 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 18:49:28,457 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 18:49:28,457 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 18:49:30,688 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 18:49:30,688 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 18:49:30,690 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 19:09:55,323 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_190955-aqp9jhss\logs\debug.log
+2025-03-09 19:09:55,324 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_190955-aqp9jhss\logs\debug-internal.log
+2025-03-09 19:09:55,324 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401FB5DE50>
+2025-03-09 19:09:55,324 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 19:09:55,324 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 19:09:55,324 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 19:09:55,325 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 19:09:55,326 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 19:09:55,327 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 19:09:55,328 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 19:09:55,341 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597740: character maps to <undefined>
+2025-03-09 19:09:55,341 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 19:09:55,376 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 19:09:55,751 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 19:09:55,899 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 19:09:55,899 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 19:09:55,899 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 19:09:55,900 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 19:09:55,901 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 19:11:34,397 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/aqp9jhss
+2025-03-09 19:11:34,398 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 19:11:34,398 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 19:11:34,398 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 19:11:34,399 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 19:11:34,399 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 19:11:34,399 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 19:11:36,382 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 19:11:36,382 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 19:11:36,383 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 19:12:44,352 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_191244-nwdjwezb\logs\debug.log
+2025-03-09 19:12:44,352 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_191244-nwdjwezb\logs\debug-internal.log
+2025-03-09 19:12:44,353 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401FC82A80>
+2025-03-09 19:12:44,353 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 19:12:44,353 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.2, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 19:12:44,353 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 19:12:44,353 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 19:12:44,355 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 19:12:44,356 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 19:12:44,357 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 19:12:44,370 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597736: character maps to <undefined>
+2025-03-09 19:12:44,371 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 19:12:44,406 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 19:12:44,770 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 19:12:44,918 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 19:12:44,918 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 19:12:44,919 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 19:12:44,919 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 19:12:44,919 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 19:12:59,032 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 19:12:59,032 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 19:12:59,100 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 19:12:59,115 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 19:12:59,115 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 19:13:04,621 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 19:13:04,637 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_191304-wn0c9cfw\logs\debug.log
+2025-03-09 19:13:04,637 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_191304-wn0c9cfw\logs\debug-internal.log
+2025-03-09 19:13:04,637 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 19:13:04,638 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 19:13:04,638 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 19:14:10,214 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/nwdjwezb
+2025-03-09 19:14:10,215 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 19:14:10,215 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 19:14:10,215 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 19:14:10,216 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 19:14:10,216 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 19:14:10,216 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 19:14:12,237 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 19:14:12,237 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 19:14:12,238 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 19:15:47,898 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_191547-89rxnozw\logs\debug.log
+2025-03-09 19:15:47,898 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_191547-89rxnozw\logs\debug-internal.log
+2025-03-09 19:15:47,898 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401C76C130>
+2025-03-09 19:15:47,899 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 19:15:47,899 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 19:15:47,899 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 19:15:47,899 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 19:15:47,901 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 19:15:47,902 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 19:15:47,904 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 19:15:47,920 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 19:15:47,954 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 19:15:48,285 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 19:15:48,435 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 19:15:48,435 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 19:15:48,435 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 19:15:48,435 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 19:15:48,436 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 19:17:04,757 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/89rxnozw
+2025-03-09 19:17:04,758 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 19:17:04,758 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 19:17:04,758 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 19:17:04,758 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 19:17:04,759 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 19:17:04,759 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 19:17:06,895 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 19:17:06,895 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 19:17:06,897 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 22:07:04,336 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_220704-8vd58luv\logs\debug.log
+2025-03-09 22:07:04,336 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_220704-8vd58luv\logs\debug-internal.log
+2025-03-09 22:07:04,336 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401C76DC50>
+2025-03-09 22:07:04,336 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:07:04,337 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:07:04,337 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 22:07:04,337 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 22:07:04,339 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 22:07:04,341 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 22:07:04,344 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 22:07:04,355 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597768: character maps to <undefined>
+2025-03-09 22:07:04,355 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 22:07:04,401 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 22:07:05,015 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 22:07:05,202 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 22:07:05,202 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 22:07:05,203 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 22:07:05,203 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 22:07:05,203 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 22:08:24,031 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/8vd58luv
+2025-03-09 22:08:24,032 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 22:08:24,032 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:08:24,032 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 22:08:24,032 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 22:08:24,033 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 22:08:24,033 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 22:08:26,022 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 22:08:26,022 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 22:08:26,024 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 22:10:30,711 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221030-9pplr8ku\logs\debug.log
+2025-03-09 22:10:30,711 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221030-9pplr8ku\logs\debug-internal.log
+2025-03-09 22:10:30,711 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002401FD82A90>
+2025-03-09 22:10:30,711 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:10:30,712 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:10:30,712 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 22:10:30,712 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 22:10:30,714 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 22:10:30,715 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 22:10:30,716 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 22:10:30,729 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597791: character maps to <undefined>
+2025-03-09 22:10:30,730 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 22:10:30,762 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 22:10:31,140 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 22:10:31,289 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 22:10:31,289 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 22:10:31,290 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 22:10:31,290 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 22:10:31,290 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 22:10:31,405 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:10:31,405 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 22:10:31,470 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 22:10:31,489 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:10:31,490 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 22:10:49,775 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 22:10:49,784 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:10:49,784 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 22:10:49,846 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 22:10:49,862 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:10:49,863 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 22:10:51,561 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 22:10:51,584 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221051-5zsg06al\logs\debug.log
+2025-03-09 22:10:51,584 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221051-5zsg06al\logs\debug-internal.log
+2025-03-09 22:10:51,584 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:10:51,584 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:10:51,585 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 22:12:09,133 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/9pplr8ku
+2025-03-09 22:12:09,134 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 22:12:09,134 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:12:09,134 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 22:12:09,134 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 22:12:09,135 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 22:12:09,135 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 22:12:11,241 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 22:12:11,241 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 22:12:11,243 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 22:13:38,910 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221338-ctae0yo7\logs\debug.log
+2025-03-09 22:13:38,910 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221338-ctae0yo7\logs\debug-internal.log
+2025-03-09 22:13:38,910 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000024020EE0E90>
+2025-03-09 22:13:38,911 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:13:38,913 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:13:38,913 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 22:13:38,914 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 22:13:38,915 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 22:13:38,916 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 22:13:38,918 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 22:13:38,931 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 595877: character maps to <undefined>
+2025-03-09 22:13:38,931 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 22:13:38,964 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 22:13:39,307 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 22:13:39,449 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 22:13:39,449 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 22:13:39,450 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 22:13:39,450 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 22:13:39,450 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 22:14:39,061 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:14:39,061 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 22:14:39,134 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 22:14:39,150 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:14:39,151 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 22:14:47,317 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 22:14:47,334 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221447-7g2jj7yr\logs\debug.log
+2025-03-09 22:14:47,335 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221447-7g2jj7yr\logs\debug-internal.log
+2025-03-09 22:14:47,335 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:14:47,335 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:14:47,336 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 22:16:05,485 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/ctae0yo7
+2025-03-09 22:16:05,486 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 22:16:05,486 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:16:05,487 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 22:16:05,487 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 22:16:05,487 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 22:16:05,487 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 22:16:07,472 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 22:16:07,472 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 22:16:07,474 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 22:16:23,530 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221623-wzczkipv\logs\debug.log
+2025-03-09 22:16:23,530 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_221623-wzczkipv\logs\debug-internal.log
+2025-03-09 22:16:23,531 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000024021253E30>
+2025-03-09 22:16:23,531 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:16:23,556 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:16:23,556 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 22:16:23,556 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 22:16:23,558 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 22:16:23,559 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 22:16:23,561 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 22:16:23,577 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 22:16:23,612 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 22:16:23,905 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 22:16:24,047 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 22:16:24,047 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 22:16:24,048 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 22:16:24,048 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 22:16:24,048 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 22:17:44,260 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/wzczkipv
+2025-03-09 22:17:44,260 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 22:17:44,261 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:17:44,261 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 22:17:44,261 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 22:17:44,261 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 22:17:44,262 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 22:17:46,401 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 22:17:46,402 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 22:17:46,404 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 22:56:39,157 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_225639-ajwhvffw\logs\debug.log
+2025-03-09 22:56:39,157 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_225639-ajwhvffw\logs\debug-internal.log
+2025-03-09 22:56:39,157 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002402222DE50>
+2025-03-09 22:56:39,158 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 22:56:39,158 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 22:56:39,158 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 22:56:39,158 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 22:56:39,160 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 22:56:39,162 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 22:56:39,163 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 22:56:39,174 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597794: character maps to <undefined>
+2025-03-09 22:56:39,175 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 22:56:39,230 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 22:56:39,744 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 22:56:39,906 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 22:56:39,906 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 22:56:39,907 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 22:56:39,907 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 22:56:39,907 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 22:57:45,919 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/ajwhvffw
+2025-03-09 22:57:45,920 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 22:57:45,920 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 22:57:45,920 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 22:57:45,921 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 22:57:45,921 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 22:57:45,921 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 22:57:48,053 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 22:57:48,054 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 22:57:48,056 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 23:05:17,465 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_230517-bfh35kzn\logs\debug.log
+2025-03-09 23:05:17,465 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_230517-bfh35kzn\logs\debug-internal.log
+2025-03-09 23:05:17,465 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x00000240212382D0>
+2025-03-09 23:05:17,466 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:05:17,466 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 70, '_wandb': {}}
+2025-03-09 23:05:17,466 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 23:05:17,466 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 23:05:17,468 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 23:05:17,469 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 23:05:17,470 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 23:05:17,483 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597794: character maps to <undefined>
+2025-03-09 23:05:17,484 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 23:05:17,516 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 23:05:17,882 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 23:05:18,028 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 23:05:18,028 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 23:05:18,028 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 23:05:18,028 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 23:05:18,029 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 23:06:23,797 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/bfh35kzn
+2025-03-09 23:06:23,798 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 23:06:23,798 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:06:23,799 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 23:06:23,799 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 23:06:23,799 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 23:06:23,799 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 23:06:25,836 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-09 23:06:25,837 INFO    MainThread:17136 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-09 23:06:25,839 INFO    MainThread:17136 [wandb_run.py:_footer_sync_info():3924] logging synced files
+2025-03-09 23:47:05,196 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_234705-jrjnb6qi\logs\debug.log
+2025-03-09 23:47:05,197 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_234705-jrjnb6qi\logs\debug-internal.log
+2025-03-09 23:47:05,197 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x00000240254372F0>
+2025-03-09 23:47:05,197 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:47:05,198 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.1, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 100, '_wandb': {}}
+2025-03-09 23:47:05,198 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 23:47:05,198 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 23:47:05,200 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 23:47:05,201 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 23:47:05,203 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 23:47:05,215 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 597824: character maps to <undefined>
+2025-03-09 23:47:05,215 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 23:47:05,252 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 23:47:05,657 INFO    MainThread:17136 [wandb_init.py:init():994] starting run threads in backend
+2025-03-09 23:47:05,802 INFO    MainThread:17136 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-09 23:47:05,803 INFO    MainThread:17136 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-09 23:47:05,803 INFO    MainThread:17136 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-09 23:47:05,803 INFO    MainThread:17136 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-09 23:47:05,804 INFO    MainThread:17136 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-09 23:47:38,464 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:38,464 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:38,603 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:38,620 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:38,621 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:38,678 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:38,694 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:38,695 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:38,753 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:38,768 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:38,769 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:38,830 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:38,846 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:38,846 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:38,905 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:38,923 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:38,924 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:38,984 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:39,008 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:39,008 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:39,065 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:39,080 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:39,081 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:39,138 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:39,154 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:39,155 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:39,210 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:39,225 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:39,226 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:47:39,282 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:47:39,297 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:47:39,298 INFO    MainThread:17136 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-09 23:48:38,164 INFO    MainThread:17136 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-09 23:48:38,183 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_234838-46em4ndn\logs\debug.log
+2025-03-09 23:48:38,183 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_234838-46em4ndn\logs\debug-internal.log
+2025-03-09 23:48:38,184 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:48:38,184 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.05, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 100, '_wandb': {}}
+2025-03-09 23:48:38,184 INFO    MainThread:17136 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-09 23:50:31,732 INFO    MainThread:17136 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation/jrjnb6qi
+2025-03-09 23:50:31,733 ERROR   MainThread:17136 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-09 23:50:31,733 INFO    MainThread:17136 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-09 23:50:31,733 INFO    MainThread:17136 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-09 23:50:31,733 INFO    MainThread:17136 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-09 23:50:31,734 INFO    MainThread:17136 [wandb_run.py:_restore():2332] restore
+2025-03-09 23:50:31,734 INFO    MainThread:17136 [wandb_run.py:_restore():2338] restore done
+2025-03-09 23:55:06,202 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235506-55bzwplj\logs\debug.log
+2025-03-09 23:55:06,202 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235506-55bzwplj\logs\debug-internal.log
+2025-03-09 23:55:06,203 INFO    MainThread:17136 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002402614A350>
+2025-03-09 23:55:06,203 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:55:06,203 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.05, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 200, '_wandb': {}}
+2025-03-09 23:55:06,204 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 23:55:06,204 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 23:55:06,205 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 23:55:06,207 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 23:55:06,208 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 23:55:06,229 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 23:55:06,270 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 23:56:08,813 WARNING MainThread:17136 [wandb_init.py:init():1475] interrupted
+Traceback (most recent call last):
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1471, in init
+    return wi.init(run_settings, run_config)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 941, in init
+    result = run_init_handle.wait(
+        timeout=timeout,
+        on_progress=self._on_progress_init,
+        cancel=True,
+    )
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 275, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 122, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 118, in _wait
+    return self._event.wait(timeout=timeout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 659, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 363, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2025-03-09 23:56:18,950 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235618-mwsyde2m\logs\debug.log
+2025-03-09 23:56:18,950 INFO    MainThread:17136 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250309_235618-mwsyde2m\logs\debug-internal.log
+2025-03-09 23:56:18,951 INFO    MainThread:17136 [wandb_init.py:init():756] calling init triggers
+2025-03-09 23:56:18,951 INFO    MainThread:17136 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.05, 'architecture': 'TVAE', 'dataset': 'Physics', 'epochs': 200, '_wandb': {}}
+2025-03-09 23:56:18,955 INFO    MainThread:17136 [wandb_init.py:init():789] starting backend
+2025-03-09 23:56:18,955 INFO    MainThread:17136 [wandb_init.py:init():793] sending inform_init request
+2025-03-09 23:56:18,957 INFO    MainThread:17136 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-09 23:56:18,958 INFO    MainThread:17136 [wandb_init.py:init():808] backend started and connected
+2025-03-09 23:56:18,959 INFO    MainThread:17136 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-09 23:56:18,974 INFO    MainThread:17136 [wandb_init.py:init():901] updated telemetry
+2025-03-09 23:56:19,010 INFO    MainThread:17136 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-09 23:56:28,100 WARNING MainThread:17136 [wandb_init.py:init():1475] interrupted
+Traceback (most recent call last):
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 1471, in init
+    return wi.init(run_settings, run_config)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\wandb_init.py", line 941, in init
+    result = run_init_handle.wait(
+        timeout=timeout,
+        on_progress=self._on_progress_init,
+        cancel=True,
+    )
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 275, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 122, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 118, in _wait
+    return self._event.wait(timeout=timeout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 659, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\anhqu\anaconda3\envs\torchenv\Lib\threading.py", line 363, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

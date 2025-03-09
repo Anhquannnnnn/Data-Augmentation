@@ -1,0 +1,10 @@
+Training started at: 2025-03-09 23:47:05
+Epoch [10/100], Train loss: 16.8712, Val loss: 13.015344095187105, Learning Rate = 0.1000
+Epoch [20/100], Train loss: nan, Val loss: nan, Learning Rate = 0.0200
+Training started at: 2025-03-09 23:48:38
+Epoch [10/100], Train loss: 14.5320, Val loss: 15.714035997313353, Learning Rate = 0.0500
+[34m[1mwandb[0m: [33mWARNING[0m Fatal error while uploading data. Some run data will not be synced, but it will still be written to disk. Use `wandb sync` at the end of the run to try uploading.
+Epoch [20/100], Train loss: 13.8717, Val loss: 15.222352862895557, Learning Rate = 0.0500
+Epoch [30/100], Train loss: 13.7127, Val loss: 15.354407569328012, Learning Rate = 0.0500
+Epoch [40/100], Train loss: 13.7165, Val loss: 15.339234320294008, Learning Rate = 0.0100
+Epoch [50/100], Train loss: 12.9964, Val loss: 14.530856669970307, Learning Rate = 0.0100
