@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from sklearn.decomposition import PCA
+
 
 
 class DataPreprocessor:
@@ -188,6 +188,21 @@ class DataPreprocessor:
         
         
         return pd.DataFrame(inverse_transformed)
+    def to_long_format(self):
+        dict_output = {}
+        len_list = len(self.data['OUTPUT'][0])
+        n = len(self.data['INPUT'])
+        for i in range(len_list):
+            list_j = []
+            for j in range(n):
+                list_j.append(self.data['OUTPUT'][j][i])
+            dict_output[f"out_{i}"] = list_j
+        df_output = pd.DataFrame(dict_output)
+        return pd.concat([self.data, df_output], axis = 1, join = "inner")
+            
+
+        
+        
 
 # Example usage
 def preprocess_data_for_tvae(data: pd.DataFrame, 

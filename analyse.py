@@ -7,7 +7,6 @@ from typing import List, Union, Optional
 import random
 from preprocessing import in_out_to_list
 
-
 def display_output(data, list_output):
     plt.figure()
     for i in list_output:
@@ -201,7 +200,6 @@ class DataAnalyzer:
         plt.title('Boxplots of Numeric Variables')
         return plt.gcf()
 
-        
 
     def generate_report(self) -> str:
         """
