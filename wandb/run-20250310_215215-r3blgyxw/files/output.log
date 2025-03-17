@@ -1,0 +1,18 @@
+Training started at: 2025-03-10 21:52:15
+Epoch [10/150], Train loss: 14.1725, Val loss: 14.504099867384749, Learning Rate = 0.0700
+Epoch [20/150], Train loss: 15.6904, Val loss: 14.744206585896993, Learning Rate = 0.0700
+Epoch [30/150], Train loss: 16.1876, Val loss: 15.763375119758791, Learning Rate = 0.0700
+Epoch [40/150], Train loss: 3211.6101, Val loss: 64.19557447235685, Learning Rate = 0.0140
+Epoch [50/150], Train loss: 52.2471, Val loss: 49.69177174546678, Learning Rate = 0.0028
+Epoch [60/150], Train loss: 62.7925, Val loss: 47.58065787643006, Learning Rate = 0.0006
+Epoch [70/150], Train loss: 91.0361, Val loss: 48.56030851317699, Learning Rate = 0.0006
+Epoch [80/150], Train loss: 49.5437, Val loss: 49.63625567533391, Learning Rate = 0.0001
+Epoch [90/150], Train loss: 1451.8039, Val loss: 50.111082663505975, Learning Rate = 0.0001
+Epoch [100/150], Train loss: 79.1941, Val loss: 47.82776831032673, Learning Rate = 0.0001
+Epoch [110/150], Train loss: 48.1002, Val loss: 45.6137029374366, Learning Rate = 0.0001
+Epoch [120/150], Train loss: 48.0000, Val loss: 46.742004889857135, Learning Rate = 0.0001
+Epoch [130/150], Train loss: 48.9772, Val loss: 45.3014418496217, Learning Rate = 0.0001
+Epoch [140/150], Train loss: 46.9131, Val loss: 45.157893931575465, Learning Rate = 0.0001
+Epoch [150/150], Train loss: 49.4125, Val loss: 45.667969245325885, Learning Rate = 0.0001
+Training finished at: 2025-03-10 21:55:13
+Total training time: 0:02:57
