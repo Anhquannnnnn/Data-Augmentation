@@ -1,0 +1,140 @@
+Training CTGAN model...
+Epoch [1/100], Train - G Loss: 0.7150, D Loss: 1.3447, Val - G Loss: 0.7081, D Loss: 1.3805, LR - Generator: 0.000200, Discriminator: 0.000200
+Epoch [10/100], Train - G Loss: 0.7097, D Loss: 1.3886, Val - G Loss: 0.6825, D Loss: 1.3819, LR - Generator: 0.000200, Discriminator: 0.000200
+Epoch [20/100], Train - G Loss: 0.6987, D Loss: 1.3842, Val - G Loss: 0.6917, D Loss: 1.3889, LR - Generator: 0.000200, Discriminator: 0.000100
+Epoch [30/100], Train - G Loss: 0.7052, D Loss: 1.3813, Val - G Loss: 0.6947, D Loss: 1.3797, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [40/100], Train - G Loss: 0.7033, D Loss: 1.3832, Val - G Loss: 0.6928, D Loss: 1.3826, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [50/100], Train - G Loss: 0.6991, D Loss: 1.3776, Val - G Loss: 0.6872, D Loss: 1.3814, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [60/100], Train - G Loss: 0.7097, D Loss: 1.3771, Val - G Loss: 0.7077, D Loss: 1.3689, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [70/100], Train - G Loss: 0.7051, D Loss: 1.3763, Val - G Loss: 0.6768, D Loss: 1.3804, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [80/100], Train - G Loss: 0.7083, D Loss: 1.3768, Val - G Loss: 0.6970, D Loss: 1.3845, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [90/100], Train - G Loss: 0.7160, D Loss: 1.3737, Val - G Loss: 0.6900, D Loss: 1.3704, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [100/100], Train - G Loss: 0.7168, D Loss: 1.3731, Val - G Loss: 0.6952, D Loss: 1.3871, LR - Generator: 0.000100, Discriminator: 0.000100
+
+Real data statistics:
+             MedInc      HouseAge      AveRooms     AveBedrms    Population  \
+count  20640.000000  20640.000000  20640.000000  20640.000000  20640.000000
+mean       3.870671     28.639486      5.429000      1.096675   1425.476744
+std        1.899822     12.585558      2.474173      0.473911   1132.462122
+min        0.499900      1.000000      0.846154      0.333333      3.000000
+25%        2.563400     18.000000      4.440716      1.006079    787.000000
+50%        3.534800     29.000000      5.229129      1.048780   1166.000000
+75%        4.743250     37.000000      6.052381      1.099526   1725.000000
+max       15.000100     52.000000    141.909091     34.066667  35682.000000
+
+           AveOccup      Latitude     Longitude   MedHouseVal  HouseAge_Cat
+count  20640.000000  20640.000000  20640.000000  20640.000000  20640.000000
+mean       3.070655     35.631861   -119.569704      2.068558      2.196560
+std       10.386050      2.135952      2.003532      1.153956      1.229386
+min        0.692308     32.540000   -124.350000      0.149990      0.000000
+25%        2.429741     33.930000   -121.800000      1.196000      1.000000
+50%        2.818116     34.260000   -118.490000      1.797000      2.000000
+75%        3.282261     37.710000   -118.010000      2.647250      3.000000
+max     1243.333333     41.950000   -114.310000      5.000010      4.000000
+
+Conditioned data (HouseAge_Cat = 2) statistics:
+       HouseAge_Cat    MedInc   HouseAge  AveRooms  AveBedrms   Population  \
+count      7.000000  7.000000   7.000000  7.000000   7.000000     7.000000
+mean       3.142857  2.984149  38.592012  4.778595   1.078736  1058.801516
+std        1.214986  1.068912  11.741916  1.711293   0.054134   498.024855
+min        1.000000  1.402183  16.029375  2.623781   1.025977   175.413565
+25%        2.500000  2.293970  34.703017  3.516160   1.051968   839.746187
+50%        4.000000  3.417684  44.831318  4.516250   1.061304  1090.308959
+75%        4.000000  3.641503  46.418859  6.371538   1.085824  1409.259382
+max        4.000000  4.198234  47.039638  6.534737   1.188283  1647.876947
+
+       AveOccup   Latitude   Longitude  MedHouseVal
+count  7.000000   7.000000    7.000000     7.000000
+mean   2.595376  35.880684 -120.215227     2.132072
+std    0.629838   1.856984    2.046869     1.124664
+min    1.663881  34.024483 -122.696876     1.002724
+25%    2.167373  34.066496 -122.193374     1.447518
+50%    2.596005  36.379907 -119.373745     1.707120
+75%    3.145912  36.988886 -118.368767     2.482310
+max    3.281174  38.649634 -118.311688     4.355005
+Training CTGAN model...
+Epoch [1/100], Train - G Loss: 0.8961, D Loss: 91.1475, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.010000, Discriminator: 0.010000
+Epoch [10/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.010000, Discriminator: 0.010000
+Epoch [20/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.002000, Discriminator: 0.002000
+Epoch [30/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000400, Discriminator: 0.000400
+Epoch [40/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [50/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [60/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [70/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [80/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [90/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [100/100], Train - G Loss: 0.0000, D Loss: 100.0000, Val - G Loss: 0.0000, D Loss: 100.0000, LR - Generator: 0.000100, Discriminator: 0.000100
+
+Real data statistics:
+             MedInc      HouseAge      AveRooms     AveBedrms    Population  \
+count  20640.000000  20640.000000  20640.000000  20640.000000  20640.000000
+mean       3.870671     28.639486      5.429000      1.096675   1425.476744
+std        1.899822     12.585558      2.474173      0.473911   1132.462122
+min        0.499900      1.000000      0.846154      0.333333      3.000000
+25%        2.563400     18.000000      4.440716      1.006079    787.000000
+50%        3.534800     29.000000      5.229129      1.048780   1166.000000
+75%        4.743250     37.000000      6.052381      1.099526   1725.000000
+max       15.000100     52.000000    141.909091     34.066667  35682.000000
+
+           AveOccup      Latitude     Longitude   MedHouseVal  HouseAge_Cat
+count  20640.000000  20640.000000  20640.000000  20640.000000  20640.000000
+mean       3.070655     35.631861   -119.569704      2.068558      2.196560
+std       10.386050      2.135952      2.003532      1.153956      1.229386
+min        0.692308     32.540000   -124.350000      0.149990      0.000000
+25%        2.429741     33.930000   -121.800000      1.196000      1.000000
+50%        2.818116     34.260000   -118.490000      1.797000      2.000000
+75%        3.282261     37.710000   -118.010000      2.647250      3.000000
+max     1243.333333     41.950000   -114.310000      5.000010      4.000000
+
+Conditioned data (HouseAge_Cat = 2) statistics:
+       HouseAge_Cat    MedInc   HouseAge    AveRooms  AveBedrms    Population  \
+count           7.0  7.000000   7.000000    7.000000   7.000000      7.000000
+mean            2.0  1.455810   9.263485   32.374899  11.377844   4487.019278
+std             0.0  1.116300  12.224936   53.899920  11.387158   5153.135890
+min             2.0  0.272195  -6.469113   -1.408648  -2.321797   1930.369721
+25%             2.0  0.688941   1.136745   -0.635054   4.093849   2469.328159
+50%             2.0  0.843902   3.458834    3.038775  10.916438   2595.569541
+75%             2.0  2.247151  20.757281   56.218802  18.616239   2898.541715
+max             2.0  3.202386  24.066620  113.826672  25.630090  16147.455938
+
+         AveOccup   Latitude   Longitude  MedHouseVal
+count    7.000000   7.000000    7.000000     7.000000
+mean    85.766282  39.710507 -122.072155     3.190337
+std    226.627081   2.641569    2.384601     0.911633
+min     -0.720577  38.129314 -127.185406     2.037713
+25%     -0.004123  38.484231 -122.053346     2.812121
+50%      0.319832  39.052023 -121.091098     2.997528
+75%      0.532864  39.099474 -120.740026     3.334251
+max    599.707237  45.624802 -120.641837     5.004375
+Training CTGAN model...
+Epoch [1/300], Train - G Loss: 1.2373, D Loss: 1.2991, Val - G Loss: 0.9373, D Loss: 1.1109, LR - Generator: 0.001000, Discriminator: 0.001000
+Epoch [10/300], Train - G Loss: 1.6131, D Loss: 1.3022, Val - G Loss: 0.6754, D Loss: 1.3700, LR - Generator: 0.001000, Discriminator: 0.001000
+Epoch [20/300], Train - G Loss: 0.6980, D Loss: 1.3903, Val - G Loss: 0.7016, D Loss: 1.3885, LR - Generator: 0.000200, Discriminator: 0.000200
+Epoch [30/300], Train - G Loss: 0.6975, D Loss: 1.3819, Val - G Loss: 0.6830, D Loss: 1.3879, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [40/300], Train - G Loss: 0.7174, D Loss: 1.3812, Val - G Loss: 0.7062, D Loss: 1.3831, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [50/300], Train - G Loss: 0.7067, D Loss: 1.3827, Val - G Loss: 0.7072, D Loss: 1.3863, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [60/300], Train - G Loss: 0.7164, D Loss: 1.3764, Val - G Loss: 0.7022, D Loss: 1.4003, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [70/300], Train - G Loss: 0.7015, D Loss: 1.3835, Val - G Loss: 0.6881, D Loss: 1.3910, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [80/300], Train - G Loss: 0.7118, D Loss: 1.3797, Val - G Loss: 0.7014, D Loss: 1.3732, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [90/300], Train - G Loss: 0.7139, D Loss: 1.3846, Val - G Loss: 0.6956, D Loss: 1.3704, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [100/300], Train - G Loss: 0.7139, D Loss: 1.3796, Val - G Loss: 0.7124, D Loss: 1.3811, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [110/300], Train - G Loss: 0.7080, D Loss: 1.3839, Val - G Loss: 0.6935, D Loss: 1.3713, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [120/300], Train - G Loss: 0.7244, D Loss: 1.3826, Val - G Loss: 0.6938, D Loss: 1.3738, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [130/300], Train - G Loss: 0.7045, D Loss: 1.3760, Val - G Loss: 0.6737, D Loss: 1.4053, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [140/300], Train - G Loss: 0.7132, D Loss: 1.3770, Val - G Loss: 0.6934, D Loss: 1.3584, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [150/300], Train - G Loss: 0.7306, D Loss: 1.3792, Val - G Loss: 0.7115, D Loss: 1.3619, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [160/300], Train - G Loss: 0.7259, D Loss: 1.3670, Val - G Loss: 0.7126, D Loss: 1.3792, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [170/300], Train - G Loss: 0.7254, D Loss: 1.3751, Val - G Loss: 0.7095, D Loss: 1.3872, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [180/300], Train - G Loss: 0.7272, D Loss: 1.3793, Val - G Loss: 0.6783, D Loss: 1.3981, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [190/300], Train - G Loss: 0.7350, D Loss: 1.3689, Val - G Loss: 0.6712, D Loss: 1.3899, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [200/300], Train - G Loss: 0.7318, D Loss: 1.3750, Val - G Loss: 0.7233, D Loss: 1.3456, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [210/300], Train - G Loss: 0.7337, D Loss: 1.3710, Val - G Loss: 0.7202, D Loss: 1.3615, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [220/300], Train - G Loss: 0.7381, D Loss: 1.3758, Val - G Loss: 0.7240, D Loss: 1.3659, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [230/300], Train - G Loss: 0.7354, D Loss: 1.3551, Val - G Loss: 0.6981, D Loss: 1.3867, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [240/300], Train - G Loss: 0.7424, D Loss: 1.3669, Val - G Loss: 0.7437, D Loss: 1.3410, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [250/300], Train - G Loss: 0.7481, D Loss: 1.3586, Val - G Loss: 0.7033, D Loss: 1.3528, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [260/300], Train - G Loss: 0.7581, D Loss: 1.3499, Val - G Loss: 0.6904, D Loss: 1.4199, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [270/300], Train - G Loss: 0.7762, D Loss: 1.3504, Val - G Loss: 0.7457, D Loss: 1.3490, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [280/300], Train - G Loss: 0.7758, D Loss: 1.3456, Val - G Loss: 0.7025, D Loss: 1.4104, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [290/300], Train - G Loss: 0.7923, D Loss: 1.3288, Val - G Loss: 0.7084, D Loss: 1.3837, LR - Generator: 0.000100, Discriminator: 0.000100
+Epoch [300/300], Train - G Loss: 0.8043, D Loss: 1.3301, Val - G Loss: 0.7495, D Loss: 1.3115, LR - Generator: 0.000100, Discriminator: 0.000100
