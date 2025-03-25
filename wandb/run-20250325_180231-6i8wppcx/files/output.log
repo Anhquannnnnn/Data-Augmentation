@@ -1,0 +1,6 @@
+Epoch [1/50], Train - G Loss: 2.3256, D Loss: 1.2202, Val - G Loss: 1.2370, D Loss: 0.9688, LR - Generator: 0.005000, Discriminator: 0.002000
+Epoch [10/50], Train - G Loss: 0.9414, D Loss: 1.3201, Val - G Loss: 0.7704, D Loss: 1.4720, LR - Generator: 0.005000, Discriminator: 0.002000
+Epoch [20/50], Train - G Loss: 0.7877, D Loss: 1.3451, Val - G Loss: 0.6980, D Loss: 1.3462, LR - Generator: 0.001000, Discriminator: 0.000400
+Epoch [30/50], Train - G Loss: 0.6837, D Loss: 1.4420, Val - G Loss: 0.6587, D Loss: 1.4322, LR - Generator: 0.000200, Discriminator: 0.000080
+Epoch [40/50], Train - G Loss: 0.6944, D Loss: 1.4027, Val - G Loss: 0.6782, D Loss: 1.3941, LR - Generator: 0.000040, Discriminator: 0.000016
+Epoch [50/50], Train - G Loss: 0.6956, D Loss: 1.3786, Val - G Loss: 0.6823, D Loss: 1.3756, LR - Generator: 0.000008, Discriminator: 0.000003

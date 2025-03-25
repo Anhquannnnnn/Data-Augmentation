@@ -1,0 +1,66 @@
+2025-03-25 19:30:36,348 INFO    MainThread:428 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250325_193036-ewwcyxb3\logs\debug.log
+2025-03-25 19:30:36,348 INFO    MainThread:428 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250325_193036-ewwcyxb3\logs\debug-internal.log
+2025-03-25 19:30:36,348 INFO    MainThread:428 [wandb_init.py:monkeypatch_ipython():589] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001B41FBF10F0>
+2025-03-25 19:30:36,348 INFO    MainThread:428 [wandb_init.py:init():756] calling init triggers
+2025-03-25 19:30:36,361 INFO    MainThread:428 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'batch_size': 500, 'generator_lr': 0.005, 'discriminator_lr': 0.002, 'pac': 5, 'noise_dim': 100, 'categorical_columns': ['HouseAge_Cat'], 'data_dim': 104, 'n_categories': 5, '_wandb': {}}
+2025-03-25 19:30:36,361 INFO    MainThread:428 [wandb_init.py:init():789] starting backend
+2025-03-25 19:30:36,361 INFO    MainThread:428 [wandb_init.py:init():793] sending inform_init request
+2025-03-25 19:30:36,363 INFO    MainThread:428 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-03-25 19:30:36,364 INFO    MainThread:428 [wandb_init.py:init():808] backend started and connected
+2025-03-25 19:30:36,366 INFO    MainThread:428 [wandb_run.py:_label_probe_notebook():1196] probe notebook
+2025-03-25 19:30:36,367 INFO    MainThread:428 [wandb_run.py:_label_probe_notebook():1206] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-03-25 19:30:36,367 INFO    MainThread:428 [wandb_init.py:init():901] updated telemetry
+2025-03-25 19:30:36,401 INFO    MainThread:428 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-03-25 19:30:36,802 INFO    MainThread:428 [wandb_init.py:init():994] starting run threads in backend
+2025-03-25 19:30:36,941 INFO    MainThread:428 [wandb_run.py:_console_start():2385] atexit reg
+2025-03-25 19:30:36,942 INFO    MainThread:428 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-03-25 19:30:36,942 INFO    MainThread:428 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-03-25 19:30:36,942 INFO    MainThread:428 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-03-25 19:30:36,943 INFO    MainThread:428 [wandb_init.py:init():1036] run started, returning control to user process
+2025-03-25 19:30:37,590 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:30:37,590 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:30:37,606 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:30:37,613 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:30:37,614 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:31:46,937 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:31:46,958 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:31:46,958 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:31:46,974 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:31:46,984 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:31:46,985 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:31:50,571 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:31:52,618 INFO    MainThread:428 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250325_193152-a3xmd9nw\logs\debug.log
+2025-03-25 19:31:52,618 INFO    MainThread:428 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250325_193152-a3xmd9nw\logs\debug-internal.log
+2025-03-25 19:31:52,618 INFO    MainThread:428 [wandb_init.py:init():756] calling init triggers
+2025-03-25 19:31:52,618 INFO    MainThread:428 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'batch_size': 500, 'generator_lr': 0.005, 'discriminator_lr': 0.002, 'pac': 5, 'noise_dim': 100, 'categorical_columns': ['HouseAge_Cat'], 'data_dim': 104, 'n_categories': 5, '_wandb': {}}
+2025-03-25 19:31:52,618 INFO    MainThread:428 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-25 19:31:53,724 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:31:53,724 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:31:53,739 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:31:53,745 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:31:53,745 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:32:27,972 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:32:27,988 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:32:27,988 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:32:27,997 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:32:28,003 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:32:28,003 INFO    MainThread:428 [wandb_init.py:_pause_backend():554] pausing backend
+2025-03-25 19:32:33,807 INFO    MainThread:428 [wandb_init.py:_resume_backend():559] resuming backend
+2025-03-25 19:32:35,843 INFO    MainThread:428 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250325_193235-k9ujhzzc\logs\debug.log
+2025-03-25 19:32:35,843 INFO    MainThread:428 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\anhqu\Desktop\Anh Quan\Data Augmentation\Code\wandb\run-20250325_193235-k9ujhzzc\logs\debug-internal.log
+2025-03-25 19:32:35,844 INFO    MainThread:428 [wandb_init.py:init():756] calling init triggers
+2025-03-25 19:32:35,844 INFO    MainThread:428 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'epochs': 50, 'batch_size': 500, 'generator_lr': 0.005, 'discriminator_lr': 0.002, 'pac': 5, 'noise_dim': 100, 'categorical_columns': ['HouseAge_Cat'], 'data_dim': 104, 'n_categories': 5, '_wandb': {}}
+2025-03-25 19:32:35,844 INFO    MainThread:428 [wandb_init.py:init():781] wandb.init() called when a run is still active
+2025-03-25 19:33:20,587 INFO    MainThread:428 [wandb_run.py:_finish():2110] finishing run tuanhquanle-insa-toulouse/Data Augmentation - CTGAN/ewwcyxb3
+2025-03-25 19:33:20,588 ERROR   MainThread:428 [jupyter.py:save_history():450] Run pip install nbformat to save notebook history
+2025-03-25 19:33:20,588 INFO    MainThread:428 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-25 19:33:20,588 INFO    MainThread:428 [wandb_init.py:_jupyter_teardown():571] cleaning up jupyter logic
+2025-03-25 19:33:20,589 INFO    MainThread:428 [wandb_run.py:_atexit_cleanup():2350] got exitcode: 0
+2025-03-25 19:33:20,589 INFO    MainThread:428 [wandb_run.py:_restore():2332] restore
+2025-03-25 19:33:20,589 INFO    MainThread:428 [wandb_run.py:_restore():2338] restore done
+2025-03-25 19:33:23,563 INFO    MainThread:428 [wandb_run.py:_footer_history_summary_info():3963] rendering history
+2025-03-25 19:33:23,564 INFO    MainThread:428 [wandb_run.py:_footer_history_summary_info():3995] rendering summary
+2025-03-25 19:33:23,566 INFO    MainThread:428 [wandb_run.py:_footer_sync_info():3924] logging synced files
