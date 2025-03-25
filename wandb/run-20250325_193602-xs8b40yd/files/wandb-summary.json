@@ -1,1 +1,0 @@
-{"d_val_fake_loss":0.7785463258624077,"g_val_loss":0.6154248788952827,"_timestamp":1.7429278067038133e+09,"generator_lr":4e-05,"d_val_real_loss":0.6670840531587601,"g_loss":0.6321687445496068,"_wandb":{"runtime":43},"d_loss":1.4503785263408313,"_runtime":43.830942,"discriminator_lr":3.2000000000000007e-06,"_step":49,"epoch":49,"d_val_loss":1.4456303715705872}

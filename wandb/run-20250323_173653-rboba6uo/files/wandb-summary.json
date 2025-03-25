@@ -1,1 +1,0 @@
-{"epoch":99,"_step":99,"generator_lr":1.6000000000000004e-06,"_wandb":{"runtime":104},"g_val_loss":0,"d_loss":100.00422612970526,"_runtime":104.9148238,"g_loss":0,"d_val_loss":100.00429182786208,"discriminator_lr":2.5600000000000015e-09,"d_val_fake_loss":100.00000762939453,"_timestamp":1.742747918868333e+09,"d_val_real_loss":0.004284553390999253}

@@ -1,8 +1,0 @@
-Training CTGAN model...
-Training CTGAN model...
-Epoch [1/50], Train - G Loss: 2.4007, D Loss: 1.2366, Val - G Loss: 0.8250, D Loss: 1.2110, LR - Generator: 0.005000, Discriminator: 0.002000
-Epoch [10/50], Train - G Loss: 1.0414, D Loss: 1.2811, Val - G Loss: 0.5567, D Loss: 1.6346, LR - Generator: 0.005000, Discriminator: 0.002000
-Epoch [20/50], Train - G Loss: 1.4471, D Loss: 1.0702, Val - G Loss: 1.1403, D Loss: 1.1366, LR - Generator: 0.005000, Discriminator: 0.000400
-Epoch [30/50], Train - G Loss: 0.6557, D Loss: 1.5232, Val - G Loss: 0.5862, D Loss: 1.5629, LR - Generator: 0.001000, Discriminator: 0.000080
-Epoch [40/50], Train - G Loss: 0.6514, D Loss: 1.4281, Val - G Loss: 0.6225, D Loss: 1.4220, LR - Generator: 0.001000, Discriminator: 0.000016
-Epoch [50/50], Train - G Loss: 0.6264, D Loss: 1.4524, Val - G Loss: 0.5923, D Loss: 1.4602, LR - Generator: 0.000200, Discriminator: 0.000003
