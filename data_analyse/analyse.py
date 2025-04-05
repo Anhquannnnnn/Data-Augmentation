@@ -5,7 +5,7 @@ import seaborn as sns
 from scipy import stats
 from typing import List, Union, Optional
 import random
-from preprocessing import in_out_to_list
+from data_analyse.preprocessing import in_out_to_list
 
 def display_output(data, list_output):
     plt.figure()
