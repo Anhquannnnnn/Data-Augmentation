@@ -5,43 +5,19 @@ import seaborn as sns
 from scipy import stats
 from typing import List, Union, Optional
 import random
-from data_analyse.preprocessing import in_out_to_list
 
-def display_output(data, list_output):
-    plt.figure()
-    for i in list_output:
-        plt.plot(in_out_to_list(data["OUTPUT"][i]), label = f"DATA = {data["DATA"][i]}, T= {data["T"][i]}")
-        plt.legend()
-    
-    plt.grid()
-    plt.show()
 
 
         
 class DataAnalyzer:
-    """
-    A class for comprehensive data analysis including summary statistics,
-    visualizations, and statistical tests.
-    """
     
     def __init__(self, data: pd.DataFrame, numeric_columns,categorical_columns ):
-        """
-        Initialize the DataAnalyzer with a pandas DataFrame.
-        
-        Parameters:
-        -----------
-        data : pd.DataFrame
-            The input data to analyze
-        """
         self.data = data
         self.numeric_columns =numeric_columns
         self.categorical_columns = categorical_columns
 
         
     def get_summary_statistics(self) -> pd.DataFrame:
-        """
-        Generate comprehensive summary statistics for numeric columns.
-        """
         summary_num = self.data[self.numeric_columns].describe()
         # Add additional statistics
         summary_num.loc['skewness'] = self.data[self.numeric_columns].skew()
@@ -50,23 +26,11 @@ class DataAnalyzer:
         summary_cat = self.data[self.categorical_columns].describe()
         return summary_num, summary_cat
     
-    def analyze_distributions(self, columns: Optional[list[str]] = None) -> dict:
-        """
-        Perform normality tests and distribution analysis.
-        
-        Parameters:
-        -----------
-        columns : List[str], optional
-            Specific columns to analyze. If None, analyzes all numeric columns.
-        """
-            
+    def analyze_distributions(self, columns: Optional[list[str]] = None) -> dict:   
         results = {}
         for col in columns:
             if col in self.numeric_columns:
-                # Shapiro-Wilk test for normality
                 shapiro_stat, shapiro_p = stats.shapiro(self.data[col].dropna())
-                
-                # Kolmogorov-Smirnov test
                 ks_stat, ks_p = stats.kstest(
                     self.data[col].dropna(), 
                     'norm',
@@ -81,9 +45,6 @@ class DataAnalyzer:
         return results
     
     def chi_squared_test(self, col1: str, col2: str) -> dict:
-        """
-        Perform Chi-squared test of independence between two categorical variables.
-        """
         contingency_table = pd.crosstab(self.data[col1], self.data[col2])
         chi2, p_value, dof, expected = stats.chi2_contingency(contingency_table)
         
@@ -100,15 +61,9 @@ class DataAnalyzer:
         }
     
     def correlation_analysis(self) -> pd.DataFrame:
-        """
-        Calculate correlation matrix for numeric columns.
-        """
         return self.data[self.numeric_columns].corr()
     
     def plot_distributions(self, columns: Optional[list[str]] = None):
-        """
-        Create distribution plots for specified columns.
-        """
         if columns is None:
             columns = self.numeric_columns
             
@@ -120,7 +75,6 @@ class DataAnalyzer:
         
         for idx, col in enumerate(columns):
             if col in self.numeric_columns:
-                # Histogram with KDE
                 sns.histplot(data=self.data, x=col, kde=True, ax=axes[idx])
                 axes[idx].set_title(f'Distribution of {col}')
                 
@@ -130,41 +84,25 @@ class DataAnalyzer:
 
 
     def plot_distributions_cat(self, columns: Optional[list[str]] = None):
-        """
-        Create categorical distribution plots showing value counts for specified columns.
-        """
         if columns is None:
             columns = self.categorical_columns
-    
-        # Handle empty columns case
+
         if not columns:
             print("No categorical columns to plot")
             return None
-    
-        # Calculate grid dimensions
         n_cols = min(2, len(columns))
-        n_rows = (len(columns) + n_cols - 1) // n_cols  # More robust calculation
-    
-        # Create subplot grid
+        n_rows = (len(columns) + n_cols - 1) // n_cols  
         fig, axes = plt.subplots(n_rows, n_cols, figsize=(12, 4*n_rows))
-        axes = np.array(axes).flatten()  # Ensure axes is always an array
-    
-        # Plot each categorical distribution
+        axes = np.array(axes).flatten() 
         for idx, col in enumerate(columns):
             if col not in self.data.columns:
                 continue
-                
-            # Create count plot with trimmed x-labels
             ax = axes[idx]
             sns.countplot(data=self.data, x=col, ax=ax, order=self.data[col].value_counts().index)
             ax.set_title(f'Distribution of {col}', pad=15)
-            ax.set_xlabel('')  # Remove redundant x-axis label
-            
-            # Rotate labels and adjust layout
+            ax.set_xlabel('') 
             ax.tick_params(axis='x', rotation=45 if self.data[col].nunique() > 5 else 0)
             ax.tick_params(axis='both', labelsize=9)
-    
-        # Hide empty subplots and adjust layout
         for j in range(len(columns), len(axes)):
             axes[j].set_visible(False)
     
@@ -172,9 +110,6 @@ class DataAnalyzer:
         return fig
     
     def plot_correlation_heatmap(self):
-        """
-        Create a correlation heatmap for numeric columns.
-        """
         plt.figure(figsize=(10, 8))
         sns.heatmap(
             self.correlation_analysis(),
@@ -188,9 +123,6 @@ class DataAnalyzer:
         return plt.gcf()
     
     def plot_boxplots(self, columns: Optional[List[str]] = None):
-        """
-        Create boxplots for specified columns.
-        """
         if columns is None:
             columns = self.numeric_columns
             
@@ -202,24 +134,15 @@ class DataAnalyzer:
 
 
     def generate_report(self) -> str:
-        """
-        Generate a comprehensive analysis report.
-        """
         report = []
         report.append("Data Analysis Report")
         report.append("===================")
-        
-        # Basic information
         report.append("\n1. Dataset Overview")
         report.append(f"Number of rows: {len(self.data)}")
         report.append(f"Number of columns: {len(self.data.columns)}")
         report.append(f"Missing values:\n{self.data.isnull().sum().to_string()}")
-        
-        # Summary statistics
         report.append("\n2. Summary Statistics")
         report.append(self.get_summary_statistics().to_string())
-        
-        # Distribution analysis
         report.append("\n3. Distribution Analysis")
         dist_results = self.analyze_distributions()
         for col, tests in dist_results.items():
@@ -228,3 +151,15 @@ class DataAnalyzer:
             report.append(f"Kolmogorov-Smirnov test p-value: {tests['ks_test']['p_value']:.4f}")
         
         return "\n".join(report)
+    def plot_syn_data(self,param, noutput = 5):
+        df = self.data[(self.data['CONFIG'] == param['CONFIG']) &(self.data['T'] == param['T']) & (self.data['EQUIPEMENT'] == param['EQUIPEMENT']) & (self.data['FREQUENCE'] == param['FREQUENCE'])]
+        naff = min(df.shape[0], noutput)
+        plt.figure(figsize= (18,12))
+        for i in range(naff):
+            plt.plot(df.iloc[i,9:].values, label = f"DATA = {round(df.iloc[i,0],2)}, DELTA = {round(df.iloc[i,4],2)},MESURE A = {round(df.iloc[i,5],2)}, MESURE A REF = {round(df.iloc[i,6],2)}, MESURE B = {round(df.iloc[i,7], 2)}")
+        plt.grid()
+        plt.legend()
+        plt.title(f"CONFIG = {round(df.iloc[i,1], 2)}, T = {round(df.iloc[i,2],2)}, EQUIPEMENT = {round(df.iloc[i,3],2)},  FREQUENCE = {round(df.iloc[i,8],2)}")
+        plt.show()
+
+        

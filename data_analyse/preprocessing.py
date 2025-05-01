@@ -1,250 +1,131 @@
-import numpy as np
 import pandas as pd
-
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.impute import SimpleImputer
-
-
-
+import numpy as np
+import pywt
+from sklearn.decomposition import PCA
 class DataPreprocessor:
-    def __init__(self, 
-                 data: pd.DataFrame,
-                 numerical_features: list[str] = None,
-                 categorical_features: list[str] = None,
-                 scaling_method: str = 'standard',
-                 categorical_encoding: str = 'onehot',
-                 max_categories: int = 10):
-        """
-        Initialize the preprocessor with feature specifications
-        
-        Args:
-            numerical_features: List of numerical column names
-            categorical_features: List of categorical column names
-            scaling_method: 'standard', 'minmax', or 'robust'
-            categorical_encoding: 'onehot' or 'label'
-            max_categories: Maximum number of categories for one-hot encoding
-        """
-        self.data = data
-        self.numerical_features = numerical_features
-        self.categorical_features = categorical_features
-        self.scaling_method = scaling_method
-        self.categorical_encoding = categorical_encoding
-        self.max_categories = max_categories
-        
-        # Initialize transformers
-        self.numerical_transformer = None
-        self.categorical_transformer = None
-        self.ordinal_encoders = {}
-        self.column_transformer = None
-        self.feature_names_out_ = None
-    def get_info(self):
-        n_null = self.data.isnull().sum()
-        d_type = self.data.dtypes
-        n_moda = self.data.nunique()
+    def __init__(self, categorical_cols=None, numerical_cols=None):
+
+        self.categorical_cols = categorical_cols or []
+        self.numerical_cols = numerical_cols or []
+        self.shape_coefs = []
+    def get_info(self, data):
+        n_null = data.isnull().sum()
+        d_type = data.dtypes
+        n_modes = data.nunique()
         info = pd.DataFrame({
             'N null': n_null,
             'Data type': d_type,
-            "N modalités": n_moda
+            "N modalities": n_modes
         })
         return info
     
-    def fill_num(self,num: pd.DataFrame):
-        null_map = num.isnull().sum()
-        cols_contain_null = null_map.index[null_map >0 ]
-        for col in cols_contain_null:
-            num[col] = num[col].fillna(num[col].median())
-        return num
-
-        
-    def _create_numerical_transformer(self):
-        """Create transformer for numerical features"""
-        if self.scaling_method == 'standard':
-            return StandardScaler()
-        elif self.scaling_method == 'minmax':
-            return MinMaxScaler()
-        elif self.scaling_method == 'robust':
-            return RobustScaler()
+    def _string_to_list(self, in_out_str):
+        if isinstance(in_out_str, str):
+            list_str = in_out_str.split(", ")
+            list_float = []
+            for i in range(len(list_str)):
+                a_convert = list_str[i]
+                if i == 0:
+                    a_convert = a_convert[1:]
+                elif i == len(list_str)-1:
+                    a_convert = a_convert[:-1]
+                list_float.append(float(a_convert))
+            return list_float
         else:
-            raise ValueError(f"Unknown scaling method: {self.scaling_method}")
-            
-    def _create_categorical_transformer(self):
-        """Create transformer for categorical features"""
-        if self.categorical_encoding == 'onehot':
-            return OneHotEncoder(sparse=False, handle_unknown='ignore', 
-                               max_categories=self.max_categories)
-        elif self.categorical_encoding == 'label':
-            return LabelEncoder()
-        else:
-            raise ValueError(f"Unknown categorical encoding: {self.categorical_encoding}")
-            
-    def detect_feature_types(self, data: pd.DataFrame) -> None:
-        """Automatically detect feature types if not specified"""
-        if self.numerical_features is None and self.categorical_features is None:
-            self.numerical_features = []
-            self.categorical_features = []
-            
-            for column in data.columns:
-                if data[column].dtype in ['int64', 'float64']:
-                    self.numerical_features.append(column)
-                else:
-                    self.categorical_features.append(column)
-                    
-            print(f"Detected {len(self.numerical_features)} numerical features")
-            print(f"Detected {len(self.categorical_features)} categorical features")
+            return in_out_str
     
-    def fit(self, data: pd.DataFrame) -> 'DataPreprocessor':
-        """Fit the preprocessor to the data"""
-        # Detect feature types if not specified
-        self.detect_feature_types(data)
+    def preprocess(self, data):
+        param = data.iloc[:, 1:10]
+        if self.categorical_cols:
+            param[self.categorical_cols] = data[self.categorical_cols].astype('category')
+        if 'INPUT' in data.columns:
+            data['INPUT'] = data['INPUT'].apply(self._string_to_list)
         
-        # Create transformers
-        transformers = []
+        if 'OUTPUT' in data.columns:
+            data['OUTPUT'] = data['OUTPUT'].apply(self._string_to_list)
+            data = data.join(data['OUTPUT'].apply(pd.Series).add_prefix('OUTPUT_'))
+        cleaned_data = data.dropna().reset_index(drop=True)
+        cleaned_output = cleaned_data.iloc[:, 11:]
         
-        # Numerical features
-        if self.numerical_features:
-            self.numerical_transformer = Pipeline([
-                ('imputer', SimpleImputer(strategy='mean')),
-                ('scaler', self._create_numerical_transformer())
-            ])
-            transformers.append(('num', self.numerical_transformer, self.numerical_features))
-        
-        # Categorical features
-        if self.categorical_features:
-            self.categorical_transformer = Pipeline([
-                ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
-                ('encoder', self._create_categorical_transformer())
-            ])
-            transformers.append(('cat', self.categorical_transformer, self.categorical_features))
-        
-        
-        # Create and fit column transformer
-        self.column_transformer = ColumnTransformer(
-            transformers=transformers,
-            remainder='drop'
-        )
-        
-        self.column_transformer.fit(data)
-        
-        # Store feature names
-        self.feature_names_out_ = (
-            self.numerical_features +
-            ([] if not self.categorical_features else 
-             self.column_transformer.named_transformers_['cat']
-             .named_steps['encoder'].get_feature_names(self.categorical_features).tolist()))
-        
-        return self
-    
-    def transform(self, data: pd.DataFrame) -> np.ndarray:
-        """Transform the data"""
-        if self.column_transformer is None:
-            raise ValueError("Preprocessor must be fitted before transform")
-        
-        return self.column_transformer.transform(data)
-    
-    def fit_transform(self, data: pd.DataFrame) -> np.ndarray:
-        """Fit and transform the data"""
-        return self.fit(data).transform(data)
-    
-    def inverse_transform(self, transformed_data: np.ndarray) -> pd.DataFrame:
-        """Inverse transform the data back to original space"""
-        if self.column_transformer is None:
-            raise ValueError("Preprocessor must be fitted before inverse_transform")
-        
-        # Split the transformed data into parts for each transformer
-        current_idx = 0
-        parts = {}
-        
-        # Numerical features
-        if self.numerical_features:
-            n_numerical = len(self.numerical_features)
-            parts['num'] = transformed_data[:, current_idx:current_idx + n_numerical]
-            current_idx += n_numerical
-        
-        # Categorical features
-        if self.categorical_features and self.categorical_encoding == 'onehot':
-            n_categorical = len(self.column_transformer.named_transformers_['cat']
-                              .named_steps['encoder'].get_feature_names(self.categorical_features))
-            parts['cat'] = transformed_data[:, current_idx:current_idx + n_categorical]
-            current_idx += n_categorical
-        
-        
-        # Inverse transform each part
-        inverse_transformed = {}
-        
-        # Numerical features
-        if self.numerical_features:
-            inverse_numerical = self.numerical_transformer.inverse_transform(parts['num'])
-            for i, feature in enumerate(self.numerical_features):
-                inverse_transformed[feature] = inverse_numerical[:, i]
-        
-        # Categorical features
-        if self.categorical_features:
-            if self.categorical_encoding == 'onehot':
-                inverse_categorical = self.categorical_transformer.named_steps['encoder'].inverse_transform(parts['cat'])
-                for i, feature in enumerate(self.categorical_features):
-                    inverse_transformed[feature] = inverse_categorical[:, i]
-        
-        
-        return pd.DataFrame(inverse_transformed)
-    def to_long_format(self):
-        dict_output = {}
-        len_list = len(self.data['OUTPUT'][0])
-        n = len(self.data['INPUT'])
-        for i in range(len_list):
-            list_j = []
-            for j in range(n):
-                list_j.append(self.data['OUTPUT'][j][i])
-            dict_output[f"out_{i}"] = list_j
-        df_output = pd.DataFrame(dict_output)
-        return pd.concat([self.data, df_output], axis = 1, join = "inner")
-            
+        return cleaned_data, cleaned_output
 
-        
-        
 
-# Example usage
-def preprocess_data_for_tvae(data: pd.DataFrame, 
-                            scaling_method: str = 'standard',
-                            categorical_encoding: str = 'onehot',
-                            max_categories: int = 10):
-    """
-    Preprocess data specifically for TVAE model
-    
-    Args:
-        data: Input DataFrame
-        scaling_method: Scaling method for numerical features
-        categorical_encoding: Encoding method for categorical features
-        max_categories: Maximum number of categories for one-hot encoding
-        
-    Returns:
-        Tuple of (preprocessed_data, preprocessor)
-    """
-    # Create preprocessor
-    preprocessor = DataPreprocessor(
-        scaling_method=scaling_method,
-        categorical_encoding=categorical_encoding,
-        max_categories=max_categories
-    )
-    
-    # Fit and transform data
-    preprocessed_data = preprocessor.fit_transform(data)
-    
-    return preprocessed_data, preprocessor
-def in_out_to_list(in_out_str):
-    if type(in_out_str) == str:
-        list_str = in_out_str.split(", ")
-        list_int = []
-        for i in range(len(list_str)):
-            a_convert = list_str[i]
-            if i == 0:
-                a_convert = a_convert[1:]
-            elif i == len(list_str)-1:
-                a_convert = a_convert[:-1]
-            list_int.append(float(a_convert))
-        return list_int
-    else:
-        return in_out_str
+    def apply_pca(self, cleaned_data, cleaned_output, n_components=5, variance_threshold=0.95):
 
-    
+        pca_full = PCA()
+        pca_full.fit(cleaned_output)
+        
+        if n_components is None:
+            cumulative_variance = np.cumsum(pca_full.explained_variance_ratio_)
+            n_components = np.argmax(cumulative_variance >= variance_threshold) + 1
+        
+        explained_variance_pct = 100 * sum(pca_full.explained_variance_ratio_[:n_components])
+        print(f"Information kept: {explained_variance_pct:.9f}%")
+        
+        pca = PCA(n_components)
+        output_pca = pca.fit_transform(cleaned_output)
+        
+        pca_columns = [f"comp_{i}" for i in np.arange(1, n_components+1)]
+        param_cols = cleaned_data.iloc[:, 1:10] if cleaned_data.shape[1] >= 10 else cleaned_data
+        trainable_data = pd.concat([
+            param_cols, 
+            pd.DataFrame(data=output_pca, columns=pca_columns)
+        ], axis=1)
+        
+        return trainable_data, pca
+    def apply_wavelet_transform(self, cleaned_data, cleaned_output, wavelet='db4', level=2):
+            wavelet_coeffs = []
+            count = False
+            for index, row in cleaned_output.iterrows():
+                signal = row.values
+                coeffs = pywt.wavedec(signal, wavelet, level=level)
+                flat_coeffs = []
+                for coeff_array in coeffs:
+                    if not count:
+                        self.shape_coefs.append(len(coeff_array))
+                    flat_coeffs.extend(coeff_array)
+                count = True
+                wavelet_coeffs.append(flat_coeffs)
+
+            df_all_coeffs = pd.DataFrame(wavelet_coeffs)
+         
+            coeff_types = ['approx'] + [f'detail_{i}' for i in range(1, level + 1)]
+            col_idx = 0
+            new_cols = []
+            
+            for i, coeff_type in enumerate(coeff_types):
+                if i < len(coeffs): 
+                    coeff_length = len(coeffs[i])
+                    for j in range(coeff_length):
+                        new_cols.append(f'{coeff_type}_{j}')
+                    col_idx += coeff_length
+            
+            df_all_coeffs.columns = new_cols
+
+            param_cols = cleaned_data.iloc[:, 1:10] if cleaned_data.shape[1] >= 10 else cleaned_data
+
+            trainable_data = pd.concat([param_cols, df_all_coeffs], axis=1)
+            
+            return trainable_data
+    def inverse_wavelet_transform(self, df_all_coeffs, original_shape, wavelet='db4', level=2):
+        reconstructed_signals = []
+        approx_len = self.shape_coefs[0]
+        detail_lens = self.shape_coefs[1:]
+        for index, row in df_all_coeffs.iterrows():
+            coeffs_flat = row.values
+            start_idx = 0
+            coeff_arrays = []
+            coeff_arrays.append(coeffs_flat[start_idx:start_idx + approx_len])
+            start_idx += approx_len
+            for length in detail_lens:
+                coeff_arrays.append(coeffs_flat[start_idx:start_idx + length])
+                start_idx += length
+            
+            reconstructed = pywt.waverec(coeff_arrays, wavelet)
+            if len(reconstructed) > original_shape[1]:
+                reconstructed = reconstructed[:original_shape[1]]            
+            reconstructed_signals.append(reconstructed)
+        df_reconstructed = pd.DataFrame(reconstructed_signals)
+        df_reconstructed.columns = [f'OUTPUT_{i}' for i in range(df_reconstructed.shape[1])]
+        
+        return df_reconstructed
