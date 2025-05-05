@@ -151,6 +151,16 @@ class DataAnalyzer:
             report.append(f"Kolmogorov-Smirnov test p-value: {tests['ks_test']['p_value']:.4f}")
         
         return "\n".join(report)
+    def plot_syn_data_plus(self,param, noutput = 5):
+        df = self.data[(self.data['CONFIG'] == param['CONFIG']) &(self.data['T'] == param['T']) & (self.data['EQUIPEMENT'] == param['EQUIPEMENT']) & (self.data['FREQUENCE'] == param['FREQUENCE']) & (round(self.data['MESURE A REF'],2) == param['MESURE A REF']) ]
+        naff = min(df.shape[0], noutput)
+        plt.figure(figsize= (18,12))
+        for i in range(naff):
+            plt.plot(df.iloc[i,9:].values, label = f"DATA = {round(df.iloc[i,0],2)}, DELTA = {round(df.iloc[i,4],2)},MESURE A = {round(df.iloc[i,5],2)}, MESURE B = {round(df.iloc[i,7], 2)}")
+        plt.grid()
+        plt.legend()
+        plt.title(f"CONFIG = {param['CONFIG']}, T = {param['T']}, EQUIPEMENT = {param['EQUIPEMENT']},  FREQUENCE = {param['FREQUENCE']},  MESURE A REF = {param['MESURE A REF']}")
+        plt.show()
     def plot_syn_data(self,param, noutput = 5):
         df = self.data[(self.data['CONFIG'] == param['CONFIG']) &(self.data['T'] == param['T']) & (self.data['EQUIPEMENT'] == param['EQUIPEMENT']) & (self.data['FREQUENCE'] == param['FREQUENCE'])]
         naff = min(df.shape[0], noutput)
@@ -161,5 +171,4 @@ class DataAnalyzer:
         plt.legend()
         plt.title(f"CONFIG = {round(df.iloc[i,1], 2)}, T = {round(df.iloc[i,2],2)}, EQUIPEMENT = {round(df.iloc[i,3],2)},  FREQUENCE = {round(df.iloc[i,8],2)}")
         plt.show()
-
         

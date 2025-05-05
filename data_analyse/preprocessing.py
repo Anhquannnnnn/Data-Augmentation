@@ -34,7 +34,7 @@ class DataPreprocessor:
         else:
             return in_out_str
     
-    def preprocess(self, data):
+    def preprocess(self, data, cut = False):
         param = data.iloc[:, 1:10]
         if self.categorical_cols:
             param[self.categorical_cols] = data[self.categorical_cols].astype('category')
@@ -44,8 +44,13 @@ class DataPreprocessor:
         if 'OUTPUT' in data.columns:
             data['OUTPUT'] = data['OUTPUT'].apply(self._string_to_list)
             data = data.join(data['OUTPUT'].apply(pd.Series).add_prefix('OUTPUT_'))
+        data.drop(columns=['INPUT', 'OUTPUT'], inplace=True)
         cleaned_data = data.dropna().reset_index(drop=True)
-        cleaned_output = cleaned_data.iloc[:, 11:]
+        cleaned_data = cleaned_data.drop_duplicates().reset_index(drop=True)
+        if cut:
+            colonnes_a_supprimer = cleaned_data.columns[9:59]
+            cleaned_data = cleaned_data.drop(colonnes_a_supprimer, axis=1)
+        cleaned_output = cleaned_data.iloc[:, 9:]
         
         return cleaned_data, cleaned_output
 
@@ -66,48 +71,50 @@ class DataPreprocessor:
         output_pca = pca.fit_transform(cleaned_output)
         
         pca_columns = [f"comp_{i}" for i in np.arange(1, n_components+1)]
-        param_cols = cleaned_data.iloc[:, 1:10] if cleaned_data.shape[1] >= 10 else cleaned_data
+        param_cols = cleaned_data.iloc[:, :9] if cleaned_data.shape[1] >= 9 else cleaned_data
         trainable_data = pd.concat([
             param_cols, 
             pd.DataFrame(data=output_pca, columns=pca_columns)
         ], axis=1)
         
         return trainable_data, pca
-    def apply_wavelet_transform(self, cleaned_data, cleaned_output, wavelet='db4', level=2):
-            wavelet_coeffs = []
-            count = False
-            for index, row in cleaned_output.iterrows():
-                signal = row.values
-                coeffs = pywt.wavedec(signal, wavelet, level=level)
-                flat_coeffs = []
-                for coeff_array in coeffs:
-                    if not count:
-                        self.shape_coefs.append(len(coeff_array))
-                    flat_coeffs.extend(coeff_array)
-                count = True
-                wavelet_coeffs.append(flat_coeffs)
 
-            df_all_coeffs = pd.DataFrame(wavelet_coeffs)
-         
-            coeff_types = ['approx'] + [f'detail_{i}' for i in range(1, level + 1)]
-            col_idx = 0
-            new_cols = []
-            
-            for i, coeff_type in enumerate(coeff_types):
-                if i < len(coeffs): 
-                    coeff_length = len(coeffs[i])
-                    for j in range(coeff_length):
-                        new_cols.append(f'{coeff_type}_{j}')
-                    col_idx += coeff_length
-            
-            df_all_coeffs.columns = new_cols
-
-            param_cols = cleaned_data.iloc[:, 1:10] if cleaned_data.shape[1] >= 10 else cleaned_data
-
-            trainable_data = pd.concat([param_cols, df_all_coeffs], axis=1)
-            
-            return trainable_data
-    def inverse_wavelet_transform(self, df_all_coeffs, original_shape, wavelet='db4', level=2):
+    def apply_wavelet_transform(self, cleaned_data, cleaned_output, wavelet='db4', level=2, threshold=0.1):
+        wavelet_coeffs = []
+        self.shape_coefs = []
+        count = False
+        for index, row in cleaned_output.iterrows():
+            signal = row.values
+            coeffs = pywt.wavedec(signal, wavelet, level=level)
+        
+            for i in range(1, len(coeffs)):
+                coeffs[i] = pywt.threshold(coeffs[i], threshold, mode='soft')
+                
+            flat_coeffs = []
+            for coeff_array in coeffs:
+                if not count:
+                    self.shape_coefs.append(len(coeff_array))
+                flat_coeffs.extend(coeff_array)
+            count = True
+            wavelet_coeffs.append(flat_coeffs)
+        df_all_coeffs = pd.DataFrame(wavelet_coeffs)
+     
+        coeff_types = ['approx'] + [f'detail_{i}' for i in range(1, level + 1)]
+        col_idx = 0
+        new_cols = []
+        
+        for i, coeff_type in enumerate(coeff_types):
+            if i < len(coeffs): 
+                coeff_length = len(coeffs[i])
+                for j in range(coeff_length):
+                    new_cols.append(f'{coeff_type}_{j}')
+                col_idx += coeff_length
+        
+        df_all_coeffs.columns = new_cols
+        param_cols = cleaned_data.iloc[:,:9]
+        trainable_data = pd.concat([param_cols, df_all_coeffs], axis=1)
+        return trainable_data
+    def inverse_wavelet_transform(self, df_all_coeffs, original_shape, wavelet='db4', level=2, threshold=None):
         reconstructed_signals = []
         approx_len = self.shape_coefs[0]
         detail_lens = self.shape_coefs[1:]
@@ -117,14 +124,20 @@ class DataPreprocessor:
             coeff_arrays = []
             coeff_arrays.append(coeffs_flat[start_idx:start_idx + approx_len])
             start_idx += approx_len
-            for length in detail_lens:
-                coeff_arrays.append(coeffs_flat[start_idx:start_idx + length])
+            
+            for i, length in enumerate(detail_lens):
+                detail_coeffs = coeffs_flat[start_idx:start_idx + length]
+                if threshold is not None:
+                    detail_coeffs = pywt.threshold(detail_coeffs, threshold, mode='soft')
+                    
+                coeff_arrays.append(detail_coeffs)
                 start_idx += length
             
             reconstructed = pywt.waverec(coeff_arrays, wavelet)
             if len(reconstructed) > original_shape[1]:
                 reconstructed = reconstructed[:original_shape[1]]            
             reconstructed_signals.append(reconstructed)
+        
         df_reconstructed = pd.DataFrame(reconstructed_signals)
         df_reconstructed.columns = [f'OUTPUT_{i}' for i in range(df_reconstructed.shape[1])]
         
